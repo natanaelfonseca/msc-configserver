@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>br.com.treinamento</groupId>
-	<artifactId>MSC-ConfigServer</artifactId>
+	<groupId>br.com.treinamento.scn</groupId>
+	<artifactId>msc-configserver</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>MSC-ConfigServer</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Spring Cloud Config Server</name>
+	<description>Demo of Spring Cloud Config Server (Netflix OSS)</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -30,6 +30,11 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>	
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -69,6 +74,5 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
 
 </project>
