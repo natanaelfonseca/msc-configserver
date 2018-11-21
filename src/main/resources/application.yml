@@ -22,7 +22,7 @@ spring:
         encrypt.enabled: false
         git:
           uri: https://github.com/natanaelfonseca/msc-configurations/
-          searchPaths: ms1,ms2
+          searchPaths: ms1,ms2,booksws,contractsws,stockws
           username: natanael.vaz@gmail.com
           password: ${gitpassword}
 
