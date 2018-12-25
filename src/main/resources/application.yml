@@ -28,19 +28,20 @@ spring:
 
 #Configuracoes relacionadas ao registro no eureka
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://msc-eurekaserver:8761/eureka/
-    healthcheck:
-      enabled: true
+      defaultZone: http://servicediscovery:8761/eureka/
+      healthcheck:
+        enabled: true
       
 #Configuracoes relacionadas ao Actuator
 info:
   app:
-    name: Spring Cloud Config Service
-    description: All stuff related to Configurations is Here
-    version: 1.0.0
-
+    name:@project.name@
+    description:@project.description@
+    version:@project.version@
 
 
 ####
