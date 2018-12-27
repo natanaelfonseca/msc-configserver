@@ -5,44 +5,45 @@
 #       -  Uma configuração baseada em arquivo  (Não recomendado)
 #
 ####################################
+
 server:
-  port: 8888
-  
+  port: ${PORT:8888}
+
 spring:
   application:
-    name: msc-configserver
-    
+    name: configserver
+
   cloud:
     config:
-    
+
       discovery:
         enabled: true
-    
+
       server:
         encrypt.enabled: false
         git:
           uri: https://github.com/natanaelfonseca/msc-configurations/
           searchPaths: ms1,ms2,booksws,contractsws,stockws
           username: natanael.vaz@gmail.com
-          password: ${gitpassword}
+          password: ${GITPASSWORD}
 
 #Configuracoes relacionadas ao registro no eureka
 eureka:
   instance:
     prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 10
   client:
     serviceUrl:
-      defaultZone: http://servicediscovery:8761/eureka/
+      defaultZone: ${EUREKA_DEFAULT_ZONE:http://localhost:8761/eureka/}
       healthcheck:
         enabled: true
-      
+
 #Configuracoes relacionadas ao Actuator
 info:
   app:
     name:@project.name@
     description:@project.description@
     version:@project.version@
-
 
 ####
 #Classpath e solucao baseada em arquivo
