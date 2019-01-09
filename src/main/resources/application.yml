@@ -23,9 +23,9 @@ spring:
         encrypt.enabled: false
         git:
           uri: https://github.com/natanaelfonseca/msc-configurations/
-          searchPaths: ms1,ms2,booksws,contractsws,stockws
+          searchPaths: authserver, bookws, contractws, ms1, ms2, stockws
           username: natanael.vaz@gmail.com
-          password: 
+          password:
 
 #Configuracoes relacionadas ao registro no eureka
 eureka:
